@@ -61,7 +61,7 @@ body{
     left: 0;
     top: 50px;
     width: 200px;
-    height: 320px;
+    height: 220px;
     background-color: wheat;
     display: flex;
     justify-content: center;
@@ -78,6 +78,14 @@ body{
 }
 .nav-block__img {
     width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.8s;
+    transform: translate(-600px);
+}
+.img{
+    opacity: 1;
+    transform: translate(0px);
 }
 .nav-2__box{
     position: absolute;
@@ -89,7 +97,7 @@ body{
     flex-direction: column;
     right: 0;
     top: 40px;
-    height: 330px;
+    height: 240px;
 }
 .nav-2__box.menu{
     transform: translateX(-50px);
@@ -124,6 +132,10 @@ body{
 .nav-2__box-item{
     color: rgb(65, 166, 255);
     font-family: 'Montserrat', sans-serif;
+    transition: 0.5s;
+}
+.nav-2__box-item:hover{
+    color: white;
 }
 .header__navigation_item{
     position: relative;
@@ -337,6 +349,9 @@ body{
         } */
     }
     @media(max-width: 380px){
+        .header__navigation-block{
+            width: 170px;
+        }
         .paralax{
             width: 175px;
             top: 120px;
